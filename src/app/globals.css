@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7B5EA7;
+  --color-secondary: #3D52A0;
+  --color-accent: #F2A7C3;
+  --color-bg: #0B1020;
+  --color-bg-alt: #0F172A;
+  --color-bg-dark: #111827;
+  --color-text: #F0EBFF;
+  --color-muted: #94A3B8;
+  --font-serif: var(--font-serif), serif;
+  --font-sans: var(--font-sans), sans-serif;
+}
+
+/* Custom Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0B1020;
+    color: #F0EBFF;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    background-color: #0B1020;
+  }
+}
+
+/* Soft cinematic gradient backgrounds */
+.gradient-mesh {
+  background-color: #0B1020;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(242, 167, 195, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(123, 94, 167, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(61, 82, 160, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(15, 23, 42, 0.5) 0px, transparent 50%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #F2A7C3 0%, #7B5EA7 50%, #3D52A0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar for dark cinematic feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7B5EA7/40;
+  border-radius: 4px;
+  border: 2px solid #0B1020;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B5EA7;
+}
+
+/* Custom Lenis Scroll Container Fix */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
