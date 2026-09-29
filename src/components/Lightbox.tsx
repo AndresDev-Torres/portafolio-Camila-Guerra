@@ -8,10 +8,11 @@ interface LightboxProps {
   src: string | null;
   title?: string;
   category?: string;
+  isVideo?: boolean;
   onClose: () => void;
 }
 
-export const Lightbox: React.FC<LightboxProps> = ({ src, title, category, onClose }) => {
+export const Lightbox: React.FC<LightboxProps> = ({ src, title, category, isVideo = false, onClose }) => {
   // Listen for Escape key to close the lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -68,11 +69,15 @@ export const Lightbox: React.FC<LightboxProps> = ({ src, title, category, onClos
               className="relative max-h-[75vh] md:max-h-[80vh] max-w-full rounded-lg overflow-hidden shadow-2xl bg-black/40 border border-white/5"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={src}
-                alt={title || 'Visual Artwork'}
-                className="max-h-[75vh] md:max-h-[80vh] w-auto object-contain mx-auto"
-              />
+              {isVideo ? (
+                <video src={src} controls autoPlay playsInline className="max-h-[75vh] md:max-h-[80vh] max-w-full object-contain mx-auto" aria-label={title || 'Video'} />
+              ) : (
+                <img
+                  src={src}
+                  alt={title || 'Visual Artwork'}
+                  className="max-h-[75vh] md:max-h-[80vh] w-auto object-contain mx-auto"
+                />
+              )}
             </motion.div>
           </div>
 

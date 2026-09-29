@@ -12,6 +12,7 @@ type TranslationDict = {
     branding: string;
     photography: string;
     advertising: string;
+    socialMedia: string;
     contact: string;
   };
   hero: {
@@ -92,6 +93,16 @@ type TranslationDict = {
     side2Title: string;
     side2Medium: string;
   };
+  socialMedia: {
+    title: string;
+    subtitle: string;
+    photos: string;
+    posts: string;
+    reels: string;
+    viewReel: string;
+    previous: string;
+    next: string;
+  };
   contact: {
     title: string;
     tagline: string;
@@ -115,6 +126,7 @@ const translations: Record<Language, TranslationDict> = {
       branding: 'Branding',
       photography: 'Fotografía',
       advertising: 'Publicidad',
+      socialMedia: 'Social',
       contact: 'Contacto',
     },
     hero: {
@@ -195,6 +207,16 @@ const translations: Record<Language, TranslationDict> = {
       side2Title: 'Campaña de difusión evento pro-fondos',
       side2Medium: '2023',
     },
+    socialMedia: {
+      title: 'Creación de contenido para redes sociales',
+      subtitle: 'Fotografía, piezas gráficas y video para conectar con cada comunidad.',
+      photos: 'Fotografía',
+      posts: 'Posts & piezas gráficas',
+      reels: 'Reels',
+      viewReel: 'Ver Reel en Instagram',
+      previous: 'Anterior',
+      next: 'Siguiente',
+    },
     contact: {
       title: 'Contacto',
       tagline: '“Disponible para proyectos creativos, colaboraciones y oportunidades profesionales.”',
@@ -216,6 +238,7 @@ const translations: Record<Language, TranslationDict> = {
       branding: 'Branding',
       photography: 'Photography',
       advertising: 'Advertising',
+      socialMedia: 'Social',
       contact: 'Contact',
     },
     hero: {
@@ -295,6 +318,16 @@ const translations: Record<Language, TranslationDict> = {
       side1Medium: '2025',
       side2Title: 'Diffusion campaign for fundraiser event',
       side2Medium: '2023',
+    },
+    socialMedia: {
+      title: 'Social Media Content Creation',
+      subtitle: 'Photography, graphic pieces, and video created to connect with each community.',
+      photos: 'Photography',
+      posts: 'Posts & graphic pieces',
+      reels: 'Reels',
+      viewReel: 'Watch Reel on Instagram',
+      previous: 'Previous',
+      next: 'Next',
     },
     contact: {
       title: 'Contact',

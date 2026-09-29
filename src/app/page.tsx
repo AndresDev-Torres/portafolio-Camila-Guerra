@@ -6,6 +6,7 @@ import { Painting } from "@/components/Painting";
 import { Branding } from "@/components/Branding";
 import { Photography } from "@/components/Photography";
 import { Advertising } from "@/components/Advertising";
+import { SocialMedia } from "@/components/SocialMedia";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Branding />
         <Photography />
         <Advertising />
+        <SocialMedia />
         <Contact />
       </main>
       <Footer />

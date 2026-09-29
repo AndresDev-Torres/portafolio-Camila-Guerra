@@ -156,7 +156,7 @@ export const Photography: React.FC = () => {
   };
 
   return (
-    <section id="photography" className="py-24 md:py-36 bg-[#0B1020] px-6 md:px-12 lg:px-20 relative">
+    <section id="photography" className="pt-16 pb-24 md:pt-20 md:pb-36 bg-[#0B1020] px-6 md:px-12 lg:px-20 relative">
       <div className="absolute inset-0 bg-radial-gradient from-[#7B5EA7]/3 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">

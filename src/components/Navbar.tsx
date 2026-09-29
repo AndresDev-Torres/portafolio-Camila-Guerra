@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
       setScrolled(window.scrollY > 20);
 
       // Simple active section detection
-      const sections = ['about', 'skills', 'painting', 'branding', 'photography', 'advertising', 'contact'];
+      const sections = ['about', 'skills', 'painting', 'branding', 'photography', 'advertising', 'social-media', 'contact'];
       const scrollPosition = window.scrollY + 130;
 
       for (const section of sections) {
@@ -54,6 +54,7 @@ export const Navbar: React.FC = () => {
     { id: 'branding', label: t.nav.branding },
     { id: 'photography', label: t.nav.photography },
     { id: 'advertising', label: t.nav.advertising },
+    { id: 'social-media', label: t.nav.socialMedia },
     { id: 'contact', label: t.nav.contact },
   ];
 
